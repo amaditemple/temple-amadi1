@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Temple Amadi – Copywriter & Ghostwriter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Caveat:wght@700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F3FF;--panel:#fff;--ink:#1A1233;--muted:#5A5273;--line:#DCD3F0;--deep:#1B1340;
+  --coral:#FF5C8A;--teal:#14C8B0;--gold:#FFC83D;--sky:#5AA9FF;--violet:#5B2EFF;
+  --head:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --hand:"Caveat","Segoe Script","Bradley Hand",cursive;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:#2A1170;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--paper:#120D26;--panel:#1B1340;--ink:#EFEAFB;--muted:#B0A8C9;--line:#2E2551;--deep:#0C0820}
+}
+:root[data-theme="dark"]{--paper:#120D26;--panel:#1B1340;--ink:#EFEAFB;--muted:#B0A8C9;--line:#2E2551;--deep:#0C0820}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:400 1.0625rem/1.7 var(--body);-webkit-font-smoothing:antialiased;
+  background:radial-gradient(40rem 30rem at 100% 25%,rgba(20,200,176,.14),transparent 60%),radial-gradient(40rem 30rem at 0% 65%,rgba(255,92,138,.14),transparent 60%),var(--paper)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--head);margin:0;line-height:1.08;letter-spacing:-.02em}
+
+.hero{
+  color:#fff;overflow-x:clip;
+  background:
+    radial-gradient(34rem 26rem at 88% 8%,rgba(255,200,61,.55),transparent 62%),
+    radial-gradient(30rem 26rem at 70% 105%,rgba(255,92,138,.6),transparent 62%),
+    radial-gradient(28rem 24rem at 0% 90%,rgba(20,200,176,.45),transparent 62%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='380' height='380'%3E%3Ctext x='24' y='280' font-family='Georgia,serif' font-size='320' fill='%23ffffff' fill-opacity='.06'%3E%E2%80%9C%3C/text%3E%3C/svg%3E"),
+    linear-gradient(160deg,#2A1170,#5B2EFF 60%,#9B3DFF);
+}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;font:500 .98rem var(--head)}
+nav .brand{font-weight:800;font-size:1.2rem;text-decoration:none}
+nav .links a{text-decoration:none;margin-left:1.25rem}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:2.5rem 0 5.5rem}
+.hero h1{font-size:clamp(2.4rem,6vw,4.5rem);font-weight:800}
+.hero .lead{font-size:1.2rem;max-width:30rem;margin:1.25rem 0 2rem;color:#EDE6FF}
+.btn{display:inline-block;font:800 1rem var(--head);padding:.85rem 1.5rem;border-radius:999px;text-decoration:none;background:var(--gold);color:#1A1233;box-shadow:0 8px 0 -3px rgba(26,18,51,.25)}
+.btn.ghost{background:none;color:inherit;border:1.5px solid currentColor;margin-left:.5rem;box-shadow:none}
+
+/* Desk: layered sheets and pen */
+.desk{position:relative;padding:1rem 0}
+.sheet{border-radius:10px}
+.s1,.s2{position:absolute;inset:1rem 0}
+.s1{background:linear-gradient(135deg,var(--gold),var(--coral));transform:rotate(6deg) translate(7%,3%)}
+.s2{background:linear-gradient(135deg,var(--teal),var(--sky));transform:rotate(-5deg) translate(-5%,2%)}
+.s3{position:relative;transform:rotate(-1.5deg);color:#1A1233;padding:1.75rem 1.5rem 2rem 0;box-shadow:0 24px 50px -20px rgba(10,0,40,.7);
+  background:
+    linear-gradient(90deg,transparent 2.6rem,rgba(255,92,138,.55) 2.6rem 2.66rem,transparent 2.66rem),
+    repeating-linear-gradient(#FFFDF7 0 31px,rgba(91,46,255,.16) 31px 32px);}
+.s3 small{display:block;padding-left:3.2rem;font:500 .85rem var(--head);color:#6a6285}
+.hand{font:700 clamp(2.2rem,5.2vw,3.3rem)/1.1 var(--hand);padding-left:3.2rem;margin:.5rem 0 0}
+.ink{margin-left:3.2rem;height:4.5rem}
+.line{position:relative;width:60%;height:100%}
+.line svg.swash{width:100%;display:block;overflow:visible}
+.swash path{fill:none;stroke:var(--coral);stroke-width:5;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:0;animation:draw 2s .5s ease-in-out both}
+.pen{position:absolute;top:50%;left:91.8%;width:10.5rem;height:1.75rem;transform-origin:1% 50%;transform:translateY(-50%) rotate(-32deg);animation:move 2s .5s ease-in-out both;filter:drop-shadow(0 6px 4px rgba(0,0,0,.25))}
+.s3 .meta{margin:0;padding-left:3.2rem;font-size:1rem;color:#4a4268}
+@keyframes draw{from{stroke-dashoffset:1}}
+@keyframes move{from{left:2%}}
+
+section{padding:5rem 0}
+h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:800;margin-bottom:2rem;max-width:20ch}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.tile{padding:2rem 1.75rem 2.25rem;border-radius:22px;color:#1A1233;position:relative;overflow:hidden}
+.tile::after{content:"";position:absolute;right:-2.5rem;bottom:-2.5rem;width:9rem;height:9rem;border-radius:50%;background:rgba(255,255,255,.3)}
+.tile h3{font-size:1.5rem;margin-bottom:.5rem}
+.tile p{margin:0;max-width:24rem}
+.t1{background:var(--coral)}.t2{background:var(--gold);border-radius:22px 22px 70px 22px}.t3{background:var(--teal);border-radius:22px 70px 22px 22px}.t4{background:var(--sky)}
+
+.feature{display:grid;grid-template-columns:1fr 1fr;border-radius:26px;overflow:hidden;color:#fff;background:var(--deep)}
+.feature .quote{padding:3rem 2rem;font:700 clamp(2rem,4vw,2.8rem)/1.1 var(--hand);
+  background:radial-gradient(24rem 18rem at 100% 0,rgba(255,200,61,.7),transparent 60%),radial-gradient(22rem 18rem at 0 100%,rgba(20,200,176,.6),transparent 60%),linear-gradient(150deg,#5B2EFF,#C13CFF)}
+.feature .quote span{display:block;font:500 .95rem var(--head);margin-top:1rem;color:#F3EDFF}
+.feature .info{padding:2.5rem 2rem}
+.feature h3{font-size:1.8rem;margin-bottom:.25rem}
+.feature .tag{font:500 .95rem var(--head);color:var(--gold);margin-bottom:1rem}
+.feature p{margin:0 0 1.5rem;color:#DDD4F5}
+.next{margin-top:1.5rem;border:2px dashed var(--coral);border-radius:20px;padding:1.75rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.next h3{font-size:1.3rem}
+.next p{margin:.25rem 0 0;color:var(--muted)}
+.next .btn{box-shadow:none}
+
+#about{background:var(--panel)}
+.about{display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
+.mono{width:9.5rem;height:9.5rem;border-radius:50%;padding:7px;background:conic-gradient(var(--coral),var(--gold),var(--teal),var(--sky),var(--violet),var(--coral))}
+.mono span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:var(--deep);color:var(--gold);font:800 3rem var(--head)}
+.about p{margin:0 0 1rem;max-width:38rem;font-size:1.15rem}
+
+.contact{position:relative;overflow:hidden;color:#1A1233;padding:5rem 0;background:linear-gradient(120deg,var(--gold),var(--coral) 60%,#B84DFF)}
+.contact h2{max-width:16ch}
+.contact p{max-width:30rem;margin:0 0 2rem;font-size:1.15rem}
+.contact .btn{background:#1A1233;color:var(--gold)}
+.contact .pen2{position:absolute;right:-2rem;bottom:2.5rem;width:22rem;height:3.7rem;transform:rotate(-24deg);opacity:.95}
+footer{background:var(--deep);color:#B0A8C9;font:400 .9rem var(--head);padding:1.75rem 0 2.5rem}
+
+@media (max-width:48rem){
+  .hero-grid,.feature,.about{grid-template-columns:1fr}
+  .hero-grid{gap:2.5rem;padding:1.5rem 0 4rem}
+  .services{grid-template-columns:1fr}
+  nav .links a{margin-left:.9rem}
+  .btn.ghost{margin:.75rem 0 0}
+  section{padding:3.5rem 0}
+  .about{gap:2rem}
+  .contact .pen2{display:none}
+  .pen{width:8.5rem}
+}
+@media (prefers-reduced-motion:reduce){.swash path,.pen{animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="pb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8F6BFF"/><stop offset="1" stop-color="#3B1AB8"/></linearGradient>
+    <symbol id="pen" viewBox="0 0 360 60">
+      <rect x="96" y="14" width="236" height="32" rx="16" fill="url(#pb)"/>
+      <rect x="246" y="14" width="12" height="32" fill="#FFC83D"/>
+      <rect x="272" y="22" width="56" height="6" rx="3" fill="#FFC83D"/>
+      <rect x="108" y="18" width="130" height="5" rx="2.5" fill="#fff" opacity=".3"/>
+      <polygon points="40,23 100,14 100,46 40,37" fill="#F2B632"/>
+      <polygon points="3,30 42,24 42,36" fill="#1A1233"/>
+      <path d="M3 30H24" stroke="#F2B632" stroke-width="1.6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="brand" href="#top">Temple Amadi</a>
+      <div class="links"><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+    </nav>
+    <div class="hero-grid" id="top">
+      <div>
+        <h1>I write the words that make people say yes.</h1>
+        <p class="lead">Copywriter, ghostwriter, content writer and email marketer. I help brands say it clearly and get chosen.</p>
+        <a class="btn" href="#contact">Hire me</a><a class="btn ghost" href="#work">See my work</a>
+      </div>
+      <div class="desk" role="img" aria-label="A pen writing on lined paper">
+        <div class="sheet s1"></div><div class="sheet s2"></div>
+        <div class="sheet s3">
+          <small>From the UJÁ sales page</small>
+          <p class="hand">You imagine, We design.</p>
+          <div class="ink"><div class="line">
+            <svg class="swash" viewBox="0 0 170 44"><path pathLength="1" d="M8 24 C30 4, 50 42, 78 24 S126 6, 156 24"/></svg>
+            <svg class="pen"><use href="#pen"/></svg>
+          </div></div>
+          <p class="meta">Words for brands that want to be chosen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Writing that does a job for your business</h2>
+    <div class="services">
+      <div class="tile t1"><h3>Copywriting</h3><p>Websites, landing pages and ads that explain the offer and make the next step obvious.</p></div>
+      <div class="tile t2"><h3>Ghostwriting</h3><p>Articles, posts and books in your voice, so your ideas reach people without taking your time.</p></div>
+      <div class="tile t3"><h3>Content writing</h3><p>Blog posts and guides that rank, build trust and answer what your customers are asking.</p></div>
+      <div class="tile t4"><h3>Email marketing</h3><p>Welcome sequences, launches and newsletters that people open and click.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding-top:1rem">
+  <div class="wrap">
+    <h2>Selected work</h2>
+    <article class="feature">
+      <div class="quote">“You imagine, We design!”<span>The idea the whole page is built on</span></div>
+      <div class="info">
+        <div class="tag">Sales page copy · Fashion brand</div>
+        <h3>UJÁ by The Designer Nurse</h3>
+        <p>I wrote the landing page for a Nigerian made-to-order fashion brand. The copy sells the moment you see the dress you imagined become real, and promises delivery before your deadline.</p>
+        <a class="btn" href="https://wa.me/2347013371176">See the brand</a>
+      </div>
+    </article>
+    <div class="next">
+      <div><h3>Your brand could be next</h3><p>Tell me what you need written.</p></div>
+      <a class="btn" href="#contact">Start a project</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="mono" aria-hidden="true"><span>TA</span></div>
+    <div>
+      <h2>About me</h2>
+      <p>I’m Temple Amadi, a copywriter, ghostwriter, content writer and email marketer. I write clear, persuasive words for brands that want to be understood and chosen.</p>
+      <p>I start with how your customer feels, then find the simplest way to say it. That might be a landing page for a fashion brand, a welcome email, or an article published under your name.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let’s work together</h2>
+    <p>Tell me what you need written and when you need it. I reply within one working day.</p>
+    <a class="btn" href="mailto:amaditemple9@gmail.com">Email me</a>
+  </div>
+  <svg class="pen2" aria-hidden="true"><use href="#pen"/></svg>
+</section>
+
+<footer><div class="wrap">© Temple Amadi. All rights reserved.</div></footer>
+</body>
+</html>
